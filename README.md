@@ -33,7 +33,7 @@ repository, you must be sure to clone the submodules.
 If you're cloning the repository for the first time, use the following:
 
 ```
-git clone --recurse-submodules https://github.com/jellysquid3/DataFixerUpper.git
+git clone --recurse-submodules https://github.com/jellysquid3/cadmium-fabric.git
 ```
 
 Otherwise, to clone the submodules in an already cloned repository:
