@@ -25,6 +25,12 @@ This mod attempts to solve, or at least greatly improve, the problem of data fix
 compute. Ultimately the best solution would be to pre-compile the optimized data fixers, so that the client doesn't need
 to spend its time constantly re-computing them... but alas that is left to Mojang.
 
+### For developers
+
+This repository is just the loader shim to bring the [optimized fork of DataFixerUpper](https://github.com/jellysquid3/DataFixerUpper/)
+into the game client. As such, none of the actual optimizations are implemented here. If you'd like to start hacking,
+checkout the `modules/DataFixerUpper` library and make a new branch there.
+
 #### Cloning the repository
 
 This project makes use of [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). When cloning the
