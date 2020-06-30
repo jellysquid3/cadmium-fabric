@@ -21,9 +21,9 @@ Unfortunately, this problem has only continued to escalate with recent releases 
 many new data fixers, and as if insult to injury, seemingly no longer waits for them to be finished loading before the
 loading screen vanishes, leading to excessive lag on the main menu while they continue to build.
 
-This mod attempts to solve, or at least greatly improve, the problem of data fixers being computationally expensive to
-compute. Ultimately the best solution would be to pre-compile the optimized data fixers, so that the client doesn't need
-to spend its time constantly re-computing them... but alas that is left to Mojang.
+This mod attempts to solve, or at least greatly improve, the problem of data fixers being very CPU intensive to compute.
+Ultimately the best solution would be to pre-compile the optimized data fixers, so that the client doesn't need
+to spend its time constantly re-building them... but alas that is left to Mojang.
 
 ### For developers
 
