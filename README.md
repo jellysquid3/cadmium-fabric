@@ -50,5 +50,5 @@ git submodule update --init --recursive
 
 ### License
 
-Sodium is made available under the MIT license, a free and open-source license. For more information, please see the
+Cadmium is made available under the MIT license, a free and open-source license. For more information, please see the
 [license file](https://github.com/jellysquid3/cadmium-fabric/blob/1.15.x/dev/LICENSE.txt).
