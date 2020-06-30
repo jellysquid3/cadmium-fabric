@@ -1,0 +1,3 @@
+[submodule "modules/DataFixerUpper"]
+	path = modules/DataFixerUpper
+	url = https://github.com/jellysquid3/DataFixerUpper.git

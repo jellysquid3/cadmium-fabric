@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "cadmium",
+  "version": "${version}",
+  "name": "Cadmium",
+  "description": "An optimization mod for DataFixerUpper with the goal to make game startup take less time.",
+  "authors": [
+    "JellySquid"
+  ],
+  "contact": {
+    "homepage": "https://jellysquid.me/",
+    "sources": "https://github.com/jellysquid3/cadmium-fabric"
+  },
+  "license": "MIT",
+  "icon": "assets/cadmium/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.jellysquid.mods.cadmium.CadmiumMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.8.0",
+    "minecraft": "1.15.x"
+  }
+}
