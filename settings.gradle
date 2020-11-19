@@ -9,8 +9,6 @@ pluginManagement {
     }
 }
 
-includeBuild('modules/DataFixerUpper') {
-    dependencySubstitution {
-        substitute module('com.mojang:datafixerupper') with project(':')
-    }
-}
+include ":DataFixerUpper"
+
+project(":DataFixerUpper").projectDir = file("modules/DataFixerUpper")

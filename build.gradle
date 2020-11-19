@@ -9,11 +9,22 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
+configurations {
+	embed
+}
+
+configurations.all {
+	exclude group: 'com.mojang', module: 'datafixerupper'
+}
+
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	compile project(":DataFixerUpper")
+	embed project(":DataFixerUpper")
 }
 
 processResources {
@@ -44,8 +55,20 @@ task sourcesJar(type: Jar, dependsOn: classes) {
 	from sourceSets.main.allSource
 }
 
-jar {
-	from "LICENSE"
+task cleanupLibraries(type:Delete) {
+	delete "$buildDir/shaded"
 }
 
-build.dependsOn ":DataFixerUpper:build"
+task copyLibraries(type: Copy) {
+	from { configurations.embed.filter { f -> f.name.startsWith("DataFixer") } }
+	into "$buildDir/shaded/META-INF/jar-replacements"
+
+	dependsOn cleanupLibraries
+}
+
+jar {
+	from "LICENSE.txt"
+	from "$buildDir/shaded"
+
+	dependsOn copyLibraries
+}

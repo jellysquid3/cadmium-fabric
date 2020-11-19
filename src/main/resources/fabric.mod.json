@@ -15,8 +15,8 @@
   "icon": "assets/cadmium/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "me.jellysquid.mods.cadmium.CadmiumMod"
+    "preLaunch": [
+      "me.jellysquid.mods.cadmium.CadmiumPreLaunch"
     ]
   },
   "depends": {

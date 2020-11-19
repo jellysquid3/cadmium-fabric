@@ -1,0 +1,1 @@
+/META-INF/jar-replacements/DataFixerUpper-2.0.0-SNAPSHOT.jar
